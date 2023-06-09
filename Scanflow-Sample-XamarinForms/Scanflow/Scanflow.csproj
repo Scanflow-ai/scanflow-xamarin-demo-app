@@ -1,0 +1,99 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\any.svg" />
+    <None Remove="Resources\barCode.svg" />
+    <None Remove="Resources\batch.svg" />
+    <None Remove="Resources\close.svg" />
+    <None Remove="Resources\flashOff.svg" />
+    <None Remove="Resources\flashOn.svg" />
+    <None Remove="Resources\hi.svg" />
+    <None Remove="Resources\logo.svg" />
+    <None Remove="Resources\manyCode.svg" />
+    <None Remove="Resources\pivot.svg" />
+    <None Remove="Resources\qrCode.svg" />
+    <None Remove="Resources\settings.svg" />
+    <None Remove="Resources\skip1.svg" />
+    <None Remove="Resources\skip2.svg" />
+    <None Remove="Resources\skip3.svg" />
+    <None Remove="Resources\skip4.svg" />
+    <None Remove="Resources\topLogo.svg" />
+    <None Remove="topLogo.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\any.svg" />
+    <EmbeddedResource Include="Resources\barCode.svg" />
+    <EmbeddedResource Include="Resources\batch.svg" />
+    <EmbeddedResource Include="Resources\close.svg" />
+    <EmbeddedResource Include="Resources\flashOff.svg" />
+    <EmbeddedResource Include="Resources\flashOn.svg" />
+    <EmbeddedResource Include="Resources\hi.svg" />
+    <EmbeddedResource Include="Resources\logo.svg" />
+    <EmbeddedResource Include="Resources\manyCode.svg" />
+    <EmbeddedResource Include="Resources\pivot.svg" />
+    <EmbeddedResource Include="Resources\qrCode.svg" />
+    <EmbeddedResource Include="Resources\settings.svg" />
+    <EmbeddedResource Include="Resources\skip1.svg" />
+    <EmbeddedResource Include="Resources\skip2.svg" />
+    <EmbeddedResource Include="Resources\skip3.svg" />
+    <EmbeddedResource Include="Resources\skip4.svg" />
+    <EmbeddedResource Include="Resources\topLogo.svg" />
+    <EmbeddedResource Include="topLogo.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+    <PackageReference Include="Scanflow.TextCapture.Xamarin.Forms" Version="1.2.2" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.3" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+    <PackageReference Include="Xamarin.Forms.InputKit" Version="4.1.6" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\Homepage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SettingPopupPage.xaml.cs">
+      <DependentUpon>SettingPopupPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Styles\DarkTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\WhiteTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ScanViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SettingPopupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TextCaptureResultPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WelcomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
