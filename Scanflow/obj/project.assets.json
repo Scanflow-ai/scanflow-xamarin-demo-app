@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Plugin.Permissions >= 6.0.1",
+      "Rg.Plugins.Popup >= 2.1.0",
+      "Scanflow.TextCapture.Xamarin.Forms >= 1.2.2",
+      "SkiaSharp.Views.Forms >= 2.88.3",
+      "Xamarin.Essentials >= 1.7.5",
+      "Xamarin.FFImageLoading.Svg.Forms >= 2.4.11.982",
+      "Xamarin.Forms >= 5.0.0.2578",
+      "Xamarin.Forms.InputKit >= 4.1.6",
+      "Xamarin.Forms.PancakeView >= 2.3.0.759"
+    ]
+  },
+  "packageFolders": {
+    "/Users/mac-obs-55/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow/Scanflow.csproj",
+      "projectName": "Scanflow",
+      "projectPath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow/Scanflow.csproj",
+      "packagesPath": "/Users/mac-obs-55/.nuget/packages/",
+      "outputPath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/mac-obs-55/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "/Users/mac-obs-55/Desktop/Error": {},
+        "/Users/mac-obs-55/Desktop/New Packages": {},
+        "/Users/mac-obs-55/Desktop/Success": {},
+        "/Users/mac-obs-55/Desktop/second": {},
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "dependencies": {
+          "Plugin.Permissions": {
+            "target": "Package",
+            "version": "[6.0.1, )"
+          },
+          "Rg.Plugins.Popup": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "Scanflow.TextCapture.Xamarin.Forms": {
+            "target": "Package",
+            "version": "[1.2.2, )"
+          },
+          "SkiaSharp.Views.Forms": {
+            "target": "Package",
+            "version": "[2.88.3, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.7.5, )"
+          },
+          "Xamarin.FFImageLoading.Svg.Forms": {
+            "target": "Package",
+            "version": "[2.4.11.982, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2578, )"
+          },
+          "Xamarin.Forms.InputKit": {
+            "target": "Package",
+            "version": "[4.1.6, )"
+          },
+          "Xamarin.Forms.PancakeView": {
+            "target": "Package",
+            "version": "[2.3.0.759, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.306/RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/mac-obs-55/Desktop/New Packages' doesn't exist.",
+      "libraryId": "Scanflow.TextCapture.Xamarin.Forms"
+    }
+  ]
+}

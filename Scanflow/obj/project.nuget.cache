@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "o6yXmdklYZu9HtAfSFwQyD8Ja+810VAV5xnnAX0Y2Cg/jmNkugEpol9OiWq9jpogD/WtgfaVdUzxB5CueI07Lw==",
+  "success": false,
+  "projectFilePath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow/Scanflow.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/mac-obs-55/Desktop/New Packages' doesn't exist.",
+      "libraryId": "Scanflow.TextCapture.Xamarin.Forms"
+    }
+  ]
+}
