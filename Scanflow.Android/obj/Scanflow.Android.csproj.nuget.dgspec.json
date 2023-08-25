@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.Android/Scanflow.Android.csproj": {}
+  },
+  "projects": {
+    "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.Android/Scanflow.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.Android/Scanflow.Android.csproj",
+        "projectName": "Scanflow.Android",
+        "projectPath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.Android/Scanflow.Android.csproj",
+        "packagesPath": "/Users/mac-obs-55/.nuget/packages/",
+        "outputPath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.Android/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/mac-obs-55/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid13.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid13.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid13.0": {
+          "dependencies": {
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Scanflow.TextCapture.Xamarin.Forms": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
+            "SkiaSharp.Views.Forms": {
+              "target": "Package",
+              "version": "[2.88.3, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Xamarin.FFImageLoading.Svg.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2196, )"
+            },
+            "Xamarin.Forms.InputKit": {
+              "target": "Package",
+              "version": "[4.1.6, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[2.3.0.759, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

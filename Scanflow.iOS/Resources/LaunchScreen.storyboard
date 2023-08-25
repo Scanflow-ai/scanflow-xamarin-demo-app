@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X5k-f2-b5h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4864" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash-Screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="1865">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="tintColor" red="0.039215686274509803" green="0.37647058823529411" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="L&amp;T.png" translatesAutoresizingMaskIntoConstraints="NO" id="2161">
+                                <rect key="frame" x="97" y="808" width="180" height="43"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EIP.png" translatesAutoresizingMaskIntoConstraints="NO" id="2162">
+                                <rect key="frame" x="290" y="824" width="62" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="2186"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_applogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1874">
+                                <rect key="frame" x="177" y="413" width="50" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="1878"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2145">
+                                <rect key="frame" x="150" y="491" width="104" height="35"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="0.59999999999999998"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="2148"/>
+                                    <constraint firstAttribute="height" constant="35" id="2149"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="ePragati">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.19796248024881485" blue="0.73386205808080807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2137"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1865" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="top" id="1866"/>
+                            <constraint firstItem="1865" firstAttribute="bottom" secondItem="yd7-JS-zBw" secondAttribute="bottom" id="1868"/>
+                            <constraint firstItem="1874" firstAttribute="centerY" secondItem="1865" secondAttribute="centerY" id="1879"/>
+                            <constraint firstItem="1865" firstAttribute="centerX" secondItem="1874" secondAttribute="centerX" constant="5" id="2136"/>
+                            <constraint firstItem="1865" firstAttribute="trailing" secondItem="2137" secondAttribute="trailing" id="2143"/>
+                            <constraint firstItem="1865" firstAttribute="leading" secondItem="2137" secondAttribute="leading" id="2144"/>
+                            <constraint firstItem="2137" firstAttribute="centerX" secondItem="2145" secondAttribute="centerX" constant="5" id="2146"/>
+                            <constraint firstItem="2145" firstAttribute="top" secondItem="1874" secondAttribute="bottom" constant="8" id="2150"/>
+                            <constraint firstItem="2137" firstAttribute="bottom" secondItem="2161" secondAttribute="bottom" constant="11" id="2163"/>
+                            <constraint firstItem="2137" firstAttribute="centerX" secondItem="2161" secondAttribute="centerX" constant="20" id="2167"/>
+                            <constraint firstItem="2137" firstAttribute="bottom" secondItem="2162" secondAttribute="bottom" constant="11" id="2183"/>
+                            <constraint firstItem="2162" firstAttribute="leading" secondItem="2161" secondAttribute="trailing" constant="13" id="2184"/>
+                            <constraint firstItem="2137" firstAttribute="trailing" secondItem="2162" secondAttribute="trailing" constant="62" id="2185"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347.82608695652175" y="338.83928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EIP.png" width="40" height="36"/>
+        <image name="L&amp;T.png" width="180" height="43"/>
+        <image name="Splash-Screen.png" width="340" height="604"/>
+        <image name="ic_applogo.png" width="50" height="50"/>
+    </resources>
+</document>

@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "dgSpecHash": "/besWmOmwDBmlypUxkCntqL4mWfU4QA9jC1clP/cfkafjO5MOdihcOTRO1nN3qLrjzwslzDvHPEY056zmTFxrA==",
+  "success": false,
+  "projectFilePath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/mac-obs-55/.nuget/packages/rg.plugins.popup/2.1.0/rg.plugins.popup.2.1.0.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/skiasharp/2.88.3/skiasharp.2.88.3.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/skiasharp.nativeassets.ios/2.88.3/skiasharp.nativeassets.ios.2.88.3.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/skiasharp.views/2.88.3/skiasharp.views.2.88.3.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/skiasharp.views.forms/2.88.3/skiasharp.views.forms.2.88.3.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/webp.touch/1.0.8/webp.touch.1.0.8.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.ffimageloading/2.4.11.982/xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.ffimageloading.svg/2.4.11.982/xamarin.ffimageloading.svg.2.4.11.982.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.ffimageloading.svg.forms/2.4.11.982/xamarin.ffimageloading.svg.forms.2.4.11.982.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.forms/5.0.0.2196/xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.forms.inputkit/4.1.6/xamarin.forms.inputkit.4.1.6.nupkg.sha512",
+    "/Users/mac-obs-55/.nuget/packages/xamarin.forms.pancakeview/2.3.0.759/xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Scanflow.TextCapture.Xamarin.Forms with version (>= 1.2.2)\n  - Found 1 version(s) in nuget [ Nearest version: 1.2.1 ]",
+      "libraryId": "Scanflow.TextCapture.Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}
