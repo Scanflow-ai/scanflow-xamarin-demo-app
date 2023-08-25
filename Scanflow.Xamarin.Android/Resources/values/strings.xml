@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Scanflow Demo</string>
+
+    <!--On boarding Screen-->
+    <string name="txt_onboarding_screen_1">  <font color="#0F0E13">Scanflow captures</font> <font color="#0C54C5"> multiple data</font><font color="#0F0E13"> from </font><font color="#0C54C5">\nID scan</font></string>
+    <string name="txt_onboarding_screen_2">  <font color="#0F0E13">Scanflow captures</font> <font color="#0C54C5"> multiple data</font><font color="#0F0E13"> from</font> <font color="#0C54C5">\nAR measurement</font></string>
+    <string name="txt_onboarding_screen_3">  <font color="#0F0E13">Scanflow captures</font> <font color="#0C54C5"> multiple data</font><font color="#0F0E13"> from </font><font color="#0C54C5">\nText scanning</font></string>
+    <string name="txt_onboarding_screen_4"> <font color="#0F0E13">Scanflow captures</font> <font color="#0C54C5"> multiple data</font><font color="#0F0E13"> from </font><font color="#0C54C5">\nBarcode</font></string>
+    <string name="txt_home_desc">Scanflow is an AI scanner on smart devices for data capture &amp; workflow automation Kit that captures multiple data from Barcode, Qrcode, Text, IDs, Safety codes.</string>
+
+    <!--Home Screen-->
+    <string name="txt_heading_select_scanner">Select scanner</string>
+    <string name="txt_heading_identity_scanner">Identity documents</string>
+    <string name="txt_one_of_many_codes">One of many\ncodes</string>
+    <string name="txt_pivot_view">Pivot View\n </string>
+    <string name="txt_document_scanning">Document\nScanning</string>
+    <string name="txt_tyre_scanning">Tire\nScanning</string>
+    <string name="txt_container_scanning">Container\nScanning</string>
+    <string name="txt_vcontainer_scanning">Vertical Container\nScanning</string>
+    <string name="txt_hcontainer_scanning">Horizontal Container\nScanning</string>
+    <string name="txt_batch_inventory">Batch/\nInventory</string>
+    <string name="txt_any">Any\n </string>
+    <string name="txt_barcode">Barcode\n </string>
+    <string name="txt_qr_scan">QR Code\n </string><!-- need \n for good looking UI-->
+    <string name="txt_id_card">ID card\n </string>
+
+    <!-- Details Screen-->
+    <string name="txt_qr_code">QR Code</string><!--without \n-->
+    <string name="txt_tyre_scan">Tire Scan</string><!--without \n-->
+    <string name="txt_container_scan">Container Scan</string><!--without \n-->
+    <string name="txt_id_scan">ID Scan</string><!--without \n-->
+
+    <string name="txt_pivot_view_scan">Pivot View</string><!--without \n-->
+    <string name="txt_one_of_many_code_scan">One of many code</string><!--without \n-->
+    <string name="txt_bar_code_scan">Bar code</string><!--without \n-->
+    <string name="txt_batch_scan">Batch Scan</string><!--without \n-->
+    <string name="txt_any_scan">Any Scan</string><!--without \n-->
+
+    <!-- Settings screen-->
+    <string name="txt_settings">Settings</string>
+    <string name="txt_enable_auto_flashlight">Enable auto flashlight</string>
+    <string name="txt_enable_auto_exposure">Enable auto exposure</string>
+    <string name="txt_zoom_option">Zoom Option</string>
+    <string name="txt_enable_one_touch_zoom">Enable one touch zoom</string>
+    <string name="txt_enable_auto_zoom">Enable auto zoom</string>
+    <string name="txt_none">None</string>
+    <string name="txt_select_resolution">Select Resolution</string>
+    <string name="txt_sd_480p">SD - 480p</string>
+    <string name="txt_full_hd_1080p">Full HD - 1080p</string>
+    <string name="txt_hd_720p">HD - 720p</string>
+    <string name="txt_4k">4K</string>
+    <string name="txt_apply">Apply</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_result_qr_code">QR Code : Hello</string>
+    <string name="txt_copy">Copy</string>
+    <string name="txt_skip">Skip</string>
+
+    <!--ID Scan-->
+    <string name="txt_scan_the_front_side_of_document">Scan the front side of a document</string>
+    <string name="txt_scan_the_back_side_of_document">Scan the back side of a document</string>
+    <string name="txt_id_details">ID Details</string>
+    <string name="txt_heading_fullname">Full Name</string>
+    <string name="txt_heading_father_name">Father Name</string>
+    <string name="txt_heading_dob">Date of Birth</string>
+    <string name="txt_heading_document_number">Document Number</string>
+    <string name="txt_heading_authority">Authority</string>
+    <string name="txt_heading_images">Images</string>
+
+    <!--Batch Scan-->
+    <string name="txt_see_details">See Details</string>
+    <string name="format_x_no_of_scan">no of scanned : %d</string>
+    <string name="txt_scan_more">Scan More</string>
+    <string name="txt_finish">Finish</string>
+    <string name="err_camera_permission_required">Camera Permission Required</string>
+    <string name="txt_authority_india">India</string>
+    <string name="btn_capture">Capture</string>
+    <string name="btn_scanning">Scanning....</string>
+    <string name="btn_scaned">Scanned</string>
+    <string name="txt_permission_not_accepted">Not accepted all the permissions</string>
+    <string name="err_scan_failed">Scanned failed!.please try again</string>
+    <string name="err_scan_failed_container">Scan failed, Please move closer to the container</string>
+    <string name="btn_scan">Scan</string>
+
+    <!-- Document Scanner -->
+    <string name="error">Error</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="deletus">Delete</string>
+    <string name="delete_all_images">Discard document!</string>
+    <string name="discard_all_images">Discard document?</string>
+    <string name="save_pdf">Save PDF</string>
+    <string name="scan">Scan</string>
+    <string name="normal">Normal</string>
+    <string name="auto">Auto</string>
+    <string name="black_and_white">Black and white</string>
+    <string name="document">Document</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="to_delete_pdf">Do you want to delete the pdf file?</string>
+    <string name="share">Share</string>
+    <string name="no_pdf_documents">No PDF documents</string>
+    <string name="save_to">Save to</string>
+    <string name="saved">Saved</string>
+
+    <string name="capture_button_alt">Capture</string>
+    <string name="switch_camera_button_alt">Switch camera</string>
+    <string name="gallery_button_alt">Gallery</string>
+    <string name="back_button_alt">Back</string>
+    <string name="share_button_alt">Share</string>
+    <string name="share_hint">Share using</string>
+    <string name="capture_mode_camera">Camera</string>
+    <string name="capture_mode_hdr">HDR</string>
+    <string name="capture_mode_night">Night</string>
+    <string name="delete_button_alt">Delete</string>
+    <string name="delete_dialog">Delete current photo?</string>
+    <string name="delete_title">Confirm</string>
+    <string name="preference_file_key">scanflow_pref</string>
+    <string name="todo">TODO</string>
+</resources>

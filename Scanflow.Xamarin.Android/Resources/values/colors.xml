@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimaryDark">#1B3147</color>
+    <color name="colorAccent">#3498db</color>
+     <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="white_alpha50">#80FFFFFF</color>
+    <color name="black_alpha50">#80000000</color>
+    <color name="black_444">#444444</color>
+    <color name="gray">#7f7f7f</color>
+
+    <color name="primary">#0C54C5</color>
+    <color name="primary_20">#300C54C5</color>
+    <color name="primaryDark">#034CBF</color>
+    <color name="viewBgLineColor">#BEBEBE</color>
+    <color name="viewBgLineColor_alpha30">#4DBEBEBE</color>
+    <color name="txt_color">#6E6E6E</color>
+    <color name="view_id_card_color">#D7DBDF</color>
+
+    <color name="logo_top_left">#2256DE</color>
+    <color name="logo_top_right">#FF543E</color>
+    <color name="logo_bottom_left">#FFAF4D</color>
+    <color name="logo_bottom_right">#3098F1</color>
+    <color name="tint_img_doc">#b1b5b4</color>
+
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
+
+    <color name="cherry_red">#D2042D</color>
+
+    <color name="settings_heading_color">#535353</color>
+</resources>

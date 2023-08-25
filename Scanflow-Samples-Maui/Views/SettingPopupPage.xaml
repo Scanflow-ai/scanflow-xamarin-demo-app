@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScanflowMaui.Views.SettingPopupPage"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui" 
+                  >
+    <Grid RowDefinitions="13*,1*,71*,90*,18*">
+        <StackLayout Orientation="Horizontal" Grid.Row="0">
+            <Label Text="Settings"  FontSize="25" TextColor="Black" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="18,0,0,0" FontAttributes="Bold" FontFamily="HelveticaNowDisplay-Regular"/>
+            <Image Source="close.svg" HeightRequest="18" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="15,15,25,5">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Cancel_Clicked"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <BoxView Grid.Row="1" BackgroundColor="#BEBEBE" HeightRequest="1" VerticalOptions="StartAndExpand" Opacity="0.3"/>
+        <Grid Grid.Row="2" Margin="0,10,0,0" RowDefinitions="50*,80*">
+             <StackLayout Grid.Row="0" Margin="20,0,0,0" Spacing="13">
+                <Grid ColumnDefinitions="6*,80*">
+                   
+                    <input:CheckBox Text="Enable auto flashlight" Color="#0C54C5" Grid.ColumnSpan="2" TextFontSize="16" TextColor="Black" BorderColor="Gray" CheckChanged="CheckBox_CheckChanged"/>
+
+                </Grid>
+                <Grid ColumnDefinitions="10*,80*">
+                    
+                    <input:CheckBox Text="Enable auto exposure" Color="#0C54C5" Grid.ColumnSpan="2" TextFontSize="16" TextColor="Black" BorderColor="Gray"/>
+
+                </Grid>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Margin="20,15,0,0" Spacing="20">
+                <Label Text="Select Resolution" FontSize="23" FontAttributes="Bold"/>
+                <input:RadioButtonGroupView Spacing="30" >
+                    <input:RadioButton x:Name="sd" Text="SD-480" TextFontSize="18" TextColor="Black" CircleColor="Gray" Color="#0C54C5" />
+                    <input:RadioButton x:Name="hd" Text="HD-720p" TextFontSize="18" TextColor="Black" CircleColor="Gray" Color="#0C54C5"/>
+                    <input:RadioButton x:Name="full" Text="Full HD - 1080" TextFontSize="18" TextColor="Black" CircleColor="Gray" Color="#0C54C5"/>
+                    <input:RadioButton x:Name="hdk" Text="4K" TextFontSize="18" TextColor="Black" CircleColor="Gray" Color="#0C54C5" />
+                </input:RadioButtonGroupView>
+
+            </StackLayout>
+
+        </Grid>
+        <StackLayout Grid.Row="4" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"  Orientation="Horizontal" HeightRequest="40" Margin="10,3,3,3">
+            <Button WidthRequest="160" HeightRequest="50" Margin="7" CornerRadius="25" Text="Cancel" TextColor="#0C54C5" FontSize="20" BorderColor="#0C54C5" TextTransform="None" BackgroundColor="White" BorderWidth="3" Clicked="Cancel_Clicked"/>
+            <Button WidthRequest="160" HeightRequest="50" Margin="7" CornerRadius="25" Text="Apply" FontSize="20" BackgroundColor="#0C54C5" TextColor="White" TextTransform="None" />
+
+        </StackLayout>
+    </Grid>
+</mopups:PopupPage>
