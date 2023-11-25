@@ -2,29 +2,24 @@ using System;
 using UIKit;
 using Foundation;
 using CoreGraphics;
-using CoreFoundation;
 using Scanflow.BarcodeCapture.Xamarin.iOS;
-using Scanflow.TextCapture.Xamarin.iOS;
 using Scanflow.Xamarin.Native.iOS.Models;
 using System.Timers;
-using ScannerMode = Scanflow.TextCapture.Xamarin.iOS.ScannerMode;
 using System.Collections.Generic;
 using CoreVideo;
 using CoreLocation;
 using Xamarin.Essentials;
 using GlobalToast;
-using CarPlay;
 
 namespace Scanflow.Xamarin.Native.iOS
 {
-    partial class CameraViewController : UIViewController, TextCapture.Xamarin.iOS.IScanflowCameraManagerDelegate
+    partial class CameraViewController : UIViewController, IScanflowCameraManagerDelegate
     {
-
         public static List<HomePageIcons> homepageicons;
         private bool flashLightCheck = false;
         public int screenID = 0;
-        public string scannerMode;
-        public string overlayViewApperance;
+        public Scanflow.BarcodeCapture.Xamarin.iOS.ScannerMode scannerMode;
+        public Scanflow.BarcodeCapture.Xamarin.iOS.OverlayViewApperance overlayViewApperance;
         private string[] codeResults = new string[0];
         private NSTimer resultTimer;
         private Timer flashTimer;
@@ -40,7 +35,7 @@ namespace Scanflow.Xamarin.Native.iOS
         public UIActivityIndicatorView activityIndicator;
         // private ResultViewController resultViewController;
 
-        private ScanflowTextManager scanflowTextManager;
+        //private ScanflowTextManager scanflowTextManager;
         private ScanflowBarCodeManager scanFlowManager;
 
         public CameraViewController(IntPtr handle) : base(handle)
@@ -50,42 +45,30 @@ namespace Scanflow.Xamarin.Native.iOS
         public async override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            if (scannerMode == ScannerMode.ContainerHorizontal || scannerMode == ScannerMode.ContainerVertical || scannerMode == ScannerMode.Tire)
-            {
-                captureBtn.Hidden = false;
-                captureBtn.SetTitle("Capture", UIControlState.Normal);
 
-                ObjCRuntime.Class.ThrowOnInitFailure = false;
-                scanflowTextManager = new ScanflowTextManager(scanView, scannerMode, overlayViewApperance, true, UIColor.Red, UIColor.Yellow, UIColor.White, UIColor.Purple, false);
-                scanflowTextManager.ValidateLicense("43a7841d3e4e4595b052f3bdc6e53ea6b125c292");
-                scanflowTextManager.WeakDelegate = this;
-                scanflowTextManager.StartSession();
-            }
-            else
-            {
-                captureBtn.Hidden = true;
-                ObjCRuntime.Class.ThrowOnInitFailure = false;
-                scanflowBarCodeManager = new ScanflowBarCodeManager(scanView, scannerMode, overlayViewApperance, false, UIColor.Red, UIColor.Yellow, UIColor.White, UIColor.Purple, false);
-                scanflowBarCodeManager.ValidateLicense("43a7841d3e4e4595b052f3bdc6e53ea6b125c292");
-                scanflowBarCodeManager.WeakDelegate = this;
-                scanflowBarCodeManager.StartSession();
-            }
+            captureBtn.Hidden = true;
+            ObjCRuntime.Class.ThrowOnInitFailure = false;
+            scanflowBarCodeManager = new ScanflowBarCodeManager(scanView, scannerMode, overlayViewApperance, false, UIColor.Red, UIColor.Yellow, UIColor.White, UIColor.Purple, false);
+            scanflowBarCodeManager.ValidateLicense("Your License Key", CaptureType.BarcodeCapture);
+            scanflowBarCodeManager.WeakDelegate = this;
+            scanflowBarCodeManager.StartSession();
+
 
             SetupUI();
             flashLightButton.SetImage(UIImage.FromBundle(AppImages.FlashOff).ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Normal);
 
-            bottomHalfPopup = new BottomHalfPopup(this, scannerMode);
+            bottomHalfPopup = new BottomHalfPopup(this);
 
-            captureBtn.SetTitleColor(UIColor.White, UIControlState.Normal);
-            captureBtn.BackgroundColor = UIColor.Blue; // Customize button appearance
+            //captureBtn.SetTitleColor(UIColor.White, UIControlState.Normal);
+           // captureBtn.BackgroundColor = UIColor.Blue; // Customize button appearance
 
             // Create a UIActivityIndicatorView
-            activityIndicator = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.White);
-            activityIndicator.HidesWhenStopped = true;
-            activityIndicator.Center = new CoreGraphics.CGPoint(captureBtn.Bounds.Width / 1.5, captureBtn.Bounds.Height / 2);
+           // activityIndicator = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.White);
+            //activityIndicator.HidesWhenStopped = true;
+            //activityIndicator.Center = new CoreGraphics.CGPoint(captureBtn.Bounds.Width / 1.5, captureBtn.Bounds.Height / 2);
 
             // Add the UIActivityIndicatorView as a subview of the UIButton
-            captureBtn.AddSubview(activityIndicator);
+            //captureBtn.AddSubview(activityIndicator);
         }
 
         public override void ViewWillAppear(bool animated)
@@ -120,7 +103,7 @@ namespace Scanflow.Xamarin.Native.iOS
             NavigationController.PopViewController(true);
 
         }
-        partial void captureBtnTapped(Foundation.NSObject sender)
+        /*partial void captureBtnTapped(Foundation.NSObject sender)
         {
             if (!activityIndicator.IsAnimating)
             {
@@ -128,15 +111,12 @@ namespace Scanflow.Xamarin.Native.iOS
                 captureBtn.SetTitle("Scanning...", UIControlState.Normal);
             }
             scanflowTextManager.StartCaptureData();
-        }
+        }*/
         partial void flashLightBtnTapped(Foundation.NSObject sender)
         {
             flashLightCheck = !flashLightCheck;
             flashLightButton.SetImage(UIImage.FromBundle(flashLightCheck ? AppImages.FlashOn : AppImages.FlashOff).ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), UIControlState.Normal);
-            if (scanflowTextManager == null)
                 scanflowBarCodeManager.FlashLight(flashLightCheck);
-            else
-                scanflowTextManager.FlashLight(flashLightCheck);
         }
 
         partial void settingsBtnTapped(Foundation.NSObject sender)
@@ -187,23 +167,31 @@ namespace Scanflow.Xamarin.Native.iOS
 
         }
 
-        public void CapturedOutput(string result, string codeType, string[] results, UIImage processedImage, CLLocation location)
+       
+
+        public void ShowAlert(string title, string message)
         {
-            if (codeType == "batchInventory")
+
+        }
+
+        public void SessionInterruptionEnded()
+        {
+            
+        }
+
+        public void CapturedOutput(string result, BarcodeCapture.Xamarin.iOS.ScannerMode codeType, string[] results, UIImage processedImage, CLLocation location)
+        {
+            if (codeType == ScannerMode.Any)
             {
                 MainThread.InvokeOnMainThreadAsync(() =>
                 {
-                    activityIndicator.StopAnimating();
-                    captureBtn.SetTitle("Scanned", UIControlState.Normal);
                     if (results.Length > 0)
                     {
                         foreach (var item in results)
                         {
-                            bottomHalfPopup.PopupText = result;
+                            bottomHalfPopup.PopupText = item;
+                            bottomHalfPopup.ShowPopup();
                         }
-                        bottomHalfPopup.ShowPopup();
-                        captureBtn.SetTitle("Capture", UIControlState.Normal);
-
                     }
                 });
             }
@@ -213,31 +201,12 @@ namespace Scanflow.Xamarin.Native.iOS
                 {
                     MainThread.InvokeOnMainThreadAsync(() =>
                     {
-                        if (scannerMode == ScannerMode.ContainerHorizontal || scannerMode == ScannerMode.ContainerVertical || scannerMode == ScannerMode.Tire)
-                        {
-                            captureBtn.SetTitle("Scanned", UIControlState.Normal);
-                            bottomHalfPopup.PopupText = result;
-                            bottomHalfPopup.PopupImage = processedImage;
-                        }
-                        else
-                        {
-                            bottomHalfPopup.PopupText = result;
-                        }
-
-                        // Show the popup
+                        bottomHalfPopup.PopupText = result;
                         bottomHalfPopup.ShowPopup();
-                        captureBtn.SetTitle("Capture", UIControlState.Normal);
                     });
                 }
             }
         }
-
-        public void ShowAlert(string title, string message)
-        {
-
-        }
-
-
     }
 
     public class BottomHalfPopup
@@ -250,27 +219,20 @@ namespace Scanflow.Xamarin.Native.iOS
         public UIImageView resultImage;
         public UIImageView copyImage;
 
-        public BottomHalfPopup(UIViewController parentViewController, string scannerType)
+        public BottomHalfPopup(UIViewController parentViewController)
         {
             this.parentViewController = parentViewController;
-            CreatePopupView(scannerType);
+            CreatePopupView();
         }
 
-        private void CreatePopupView(string scannerType)
+        private void CreatePopupView()
         {
 
-            if (scannerType == ScannerMode.ContainerHorizontal || scannerType == ScannerMode.ContainerVertical || scannerType == ScannerMode.Tire)
-            {
-                popupView = new UIView(new CGRect(0, UIScreen.MainScreen.Bounds.Height, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height / 2.5));
-                copyImage = new UIImageView(new CGRect(popupView.Frame.Width - 80, 20, 40, 40));
-                resultText = new UILabel(new CGRect(20, 20, 150, 30));
-            }
-            else
-            {
-                popupView = new UIView(new CGRect(0, UIScreen.MainScreen.Bounds.Height, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height / 4));
-                copyImage = new UIImageView(new CGRect(popupView.Frame.Width - 80, 50, 40, 40));
-                resultText = new UILabel(new CGRect(20, 20, 250, 100));
-            }
+
+            popupView = new UIView(new CGRect(0, UIScreen.MainScreen.Bounds.Height, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height / 4));
+            copyImage = new UIImageView(new CGRect(popupView.Frame.Width - 80, 50, 40, 40));
+            resultText = new UILabel(new CGRect(20, 20, 250, 100));
+
 
             popupView.BackgroundColor = UIColor.White;
 

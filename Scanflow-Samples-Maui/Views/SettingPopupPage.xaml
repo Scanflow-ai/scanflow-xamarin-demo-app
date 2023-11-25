@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScanflowMaui.Views.SettingPopupPage"
              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
               xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui" 
                   >
-    <Grid RowDefinitions="13*,1*,71*,90*,18*">
+    <!--<Grid RowDefinitions="13*,1*,71*,90*,18*">
         <StackLayout Orientation="Horizontal" Grid.Row="0">
             <Label Text="Settings"  FontSize="25" TextColor="Black" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="18,0,0,0" FontAttributes="Bold" FontFamily="HelveticaNowDisplay-Regular"/>
             <Image Source="close.svg" HeightRequest="18" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="15,15,25,5">
@@ -45,5 +45,5 @@
             <Button WidthRequest="160" HeightRequest="50" Margin="7" CornerRadius="25" Text="Apply" FontSize="20" BackgroundColor="#0C54C5" TextColor="White" TextTransform="None" />
 
         </StackLayout>
-    </Grid>
+    </Grid>-->
 </mopups:PopupPage>

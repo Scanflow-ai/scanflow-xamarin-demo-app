@@ -1,10 +1,5 @@
 ﻿using Scanflow.Helper;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScanflowMaui.ViewModels
 {
@@ -12,7 +7,7 @@ namespace ScanflowMaui.ViewModels
     {
         public ObservableCollection<ScanResult> ScanModels { get; set; } = new ObservableCollection<ScanResult>
        {
-           new ScanResult
+                new ScanResult
                 {
                     Name= ConstantStrings.QR_Code,
                     Image="qrcode"

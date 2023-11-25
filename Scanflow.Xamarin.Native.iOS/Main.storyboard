@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aHU-qi-ZBc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -309,16 +310,15 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="V0m-h3-21K" firstAttribute="centerY" secondItem="sWH-mK-tsL" secondAttribute="centerY" id="ESh-CC-EZ8"/>
                                     <constraint firstAttribute="bottom" secondItem="V0m-h3-21K" secondAttribute="bottom" id="H16-H9-y57"/>
                                     <constraint firstAttribute="trailing" secondItem="V0m-h3-21K" secondAttribute="trailing" id="Le1-3c-VU9"/>
                                     <constraint firstItem="V0m-h3-21K" firstAttribute="top" secondItem="sWH-mK-tsL" secondAttribute="top" id="buF-uf-uvJ"/>
                                     <constraint firstItem="V0m-h3-21K" firstAttribute="leading" secondItem="sWH-mK-tsL" secondAttribute="leading" id="dH4-RT-u4w"/>
-                                    <constraint firstItem="V0m-h3-21K" firstAttribute="bottom" secondItem="3bB-zM-UY0" secondAttribute="bottom" id="h5I-u7-mk2"/>
+                                    <constraint firstItem="V0m-h3-21K" firstAttribute="bottom" secondItem="sWH-mK-tsL" secondAttribute="bottom" id="h5I-u7-mk2"/>
                                     <constraint firstItem="V0m-h3-21K" firstAttribute="centerX" secondItem="sWH-mK-tsL" secondAttribute="centerX" id="lpR-q6-BOc"/>
                                     <constraint firstAttribute="bottom" secondItem="V0m-h3-21K" secondAttribute="bottom" id="qzc-Cp-IR4"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="KuP-H6-79o"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="3bB-zM-UY0"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wp0-Xc-aqz">
                                 <rect key="frame" x="0.0" y="48" width="414" height="80"/>
@@ -448,21 +448,6 @@
                                     <action selector="flashLightBtnTapped:" destination="ai0-xj-KcE" eventType="touchUpInside" id="5pC-NV-JCq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIt-8D-16Y">
-                                <rect key="frame" x="20" y="758" width="40" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="51O-p3-4Sm"/>
-                                    <constraint firstAttribute="height" constant="40" id="rBk-YX-P51"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="oneTouchZoom">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
-                                </state>
-                                <connections>
-                                    <action selector="oneTouchZoomTapped:" destination="ai0-xj-KcE" eventType="touchUpInside" id="dSG-xF-maD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0m-bf-cYc">
                                 <rect key="frame" x="16" y="808" width="382" height="44"/>
                                 <constraints>
@@ -494,6 +479,7 @@
                             <constraint firstItem="OLm-c9-mwT" firstAttribute="leading" secondItem="so3-Mb-TgT" secondAttribute="leading" id="8i6-MM-1RX"/>
                             <constraint firstItem="OLm-c9-mwT" firstAttribute="trailing" secondItem="so3-Mb-TgT" secondAttribute="trailing" id="A3T-Ai-Gvr"/>
                             <constraint firstItem="OKh-wQ-R2t" firstAttribute="trailing" secondItem="so3-Mb-TgT" secondAttribute="trailing" id="AWi-Dc-0Ia"/>
+                            <constraint firstItem="bRL-fK-QTg" firstAttribute="bottom" secondItem="v0m-bf-cYc" secondAttribute="bottom" constant="10" id="F8Z-HO-u0R"/>
                             <constraint firstItem="v0m-bf-cYc" firstAttribute="top" secondItem="2s3-WG-LoX" secondAttribute="top" constant="80" id="FUC-SX-xFP"/>
                             <constraint firstItem="2s3-WG-LoX" firstAttribute="centerX" secondItem="bRL-fK-QTg" secondAttribute="centerX" id="NV1-2h-1lq"/>
                             <constraint firstItem="OKh-wQ-R2t" firstAttribute="bottom" secondItem="so3-Mb-TgT" secondAttribute="bottom" id="T5n-Sb-vJT"/>
@@ -502,10 +488,7 @@
                             <constraint firstItem="OKh-wQ-R2t" firstAttribute="top" secondItem="bRL-fK-QTg" secondAttribute="top" id="fuZ-KL-5TC"/>
                             <constraint firstItem="v0m-bf-cYc" firstAttribute="leading" secondItem="bRL-fK-QTg" secondAttribute="leading" constant="16" id="jmG-uK-qaQ"/>
                             <constraint firstItem="OKh-wQ-R2t" firstAttribute="leading" secondItem="so3-Mb-TgT" secondAttribute="leading" id="rKV-oA-a4s"/>
-                            <constraint firstItem="v0m-bf-cYc" firstAttribute="top" secondItem="fIt-8D-16Y" secondAttribute="top" constant="50" id="rsS-15-FI3"/>
                             <constraint firstItem="P0a-9l-i0K" firstAttribute="centerX" secondItem="xM4-Jq-TQN" secondAttribute="centerX" id="sYR-I7-aFU"/>
-                            <constraint firstItem="fIt-8D-16Y" firstAttribute="leading" secondItem="bRL-fK-QTg" secondAttribute="leading" constant="20" id="uez-Vu-xoZ"/>
-                            <constraint firstItem="bRL-fK-QTg" firstAttribute="bottom" secondItem="fIt-8D-16Y" secondAttribute="bottom" constant="64" id="vRA-Th-aGH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="614-CV-bQY"/>
@@ -514,7 +497,6 @@
                         <outlet property="captureBtn" destination="v0m-bf-cYc" id="Jjt-UU-523"/>
                         <outlet property="flashLightButton" destination="P0a-9l-i0K" id="Yuw-HG-sGW"/>
                         <outlet property="functionTitle" destination="8It-dp-cJj" id="jXS-iT-BMe"/>
-                        <outlet property="oneTouchZoomButton" destination="fIt-8D-16Y" id="Ze3-vy-sac"/>
                         <outlet property="scanView" destination="OKh-wQ-R2t" id="BV5-so-EKg"/>
                         <outlet property="scannedLabel" destination="2s3-WG-LoX" id="kl0-dF-s7d"/>
                         <outlet property="settingsButton" destination="xM4-Jq-TQN" id="feg-j3-NN2"/>
@@ -662,7 +644,6 @@
         <image name="Logo" width="240" height="38"/>
         <image name="Setting" width="32" height="32"/>
         <image name="SkipButton1" width="88" height="88"/>
-        <image name="oneTouchZoom" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,7 +1,8 @@
+﻿using Android.Content;
 using CommunityToolkit.Maui.Alerts;
 using Mopups.Pages;
 using Mopups.Services;
-using Scanflow.TextCapture.Maui;
+using Scanflow.BarcodeCapture.Maui;
 using ScanflowMaui.CustomControl;
 
 using System.Threading;
@@ -9,26 +10,22 @@ using System.Threading.Tasks;
 
 namespace ScanflowMaui.Views;
 
-public partial class TextCaptureResultPopup : PopupPage
+public partial class BarcodeResultPopup : PopupPage
 {
-   
-    public TextCaptureResultPopup(TextScanResult Result)
-	{
-		InitializeComponent();
-     
-      
-        scanImage.Source = Result.Image;
-        scanText.Text = Result.Text;
-        //scanText.Text = result.Name;
-        //scanImage.Source = result.Image;
-       
+
+    public BarcodeResultPopup(string Result)
+    {
+        InitializeComponent();
+
+
+        scanText.Text = Result;
 
     }
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
 
-        
+
     }
     private async void Copy_Tapped(object sender, EventArgs e)
     {

@@ -11,6 +11,7 @@
     <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
     <PlatformTarget>arm64</PlatformTarget>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' " />
   <ItemGroup>
     <MauiXaml Update="CustomControl\BasePopupPage.xaml">
       <SubType>Designer</SubType>

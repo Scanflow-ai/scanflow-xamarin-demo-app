@@ -1,7 +1,7 @@
 using Mopups.Pages;
 using Mopups.Services;
 using Scanflow.Helper;
-using Scanflow.TextCapture.Maui;
+using Scanflow.BarcodeCapture.Maui;
 
 
 namespace ScanflowMaui.Views;
@@ -15,24 +15,22 @@ public partial class ScanViewPage : ContentPage
 		InitializeComponent();
         scanTitle.Text = result.Name;
         Scanners(result);
-    //   textCaptureScan.OnScanResult += TextCaptureScan_OnScanResult;
-
     }
     
     private void Scanners(ScanResult result)
     {
         switch (result.Name)
         {
-            case ConstantStrings.Horizontal:
-                textCaptureScan.CreateScanSession("1a5c7076358dda4060bcfc45fb00f574aa314b78", TextCaptureConfig.HorizontalContainer, false);
+            case ConstantStrings.Barcode:
+                barcodeCaptureScan.CreateScanSession("YOUR LICENSE KEY", DecodeConfig.Barcode, false);
                 break;
 
-            case ConstantStrings.Vertical:
-                textCaptureScan.CreateScanSession("1a5c7076358dda4060bcfc45fb00f574aa314b78", TextCaptureConfig.VerticalContainer, false);
+            case ConstantStrings.QR_Code:
+                barcodeCaptureScan.CreateScanSession("YOUR LICENSE KEY", DecodeConfig.QRCode, false);
                 break;
 
-            case ConstantStrings.Tyre:
-                textCaptureScan.CreateScanSession("1a5c7076358dda4060bcfc45fb00f574aa314b78", TextCaptureConfig.Tire, false);
+            case ConstantStrings.Any:
+                barcodeCaptureScan.CreateScanSession("YOUR LICENSE KEY", DecodeConfig.Any, false);
                 break;
 
             default:
@@ -44,32 +42,13 @@ public partial class ScanViewPage : ContentPage
     {
         base.OnAppearing();
       
-    
-
-      
     }
  
-    private async void TextCaptureScan_OnScanResult(TextScanResult result)
-    {
-     await MainThread.InvokeOnMainThreadAsync(() =>
-        {
-            if(isScanflow)
-            {
-
-                MopupService.Instance.PushAsync(new TextCaptureResultPopup(result));
-                btnDrawer.Text = "Capture";
-                progressIndicator.IsRunning = false;
-                btnDrawer.IsEnabled = true;
-                isScanflow=false;
-            }
-           
-        });
-       
-    }
+  
     protected override void OnDisappearing()
     {
         base.OnDisappearing();
-        textCaptureScan.StopScanning();
+        barcodeCaptureScan.StopScanning();
        
 
     }
@@ -84,7 +63,7 @@ public partial class ScanViewPage : ContentPage
             isScanning = true;
             btnDrawer.IsEnabled = false;
             isScanflow = true;
-            textCaptureScan.StartScanning();
+            barcodeCaptureScan.StartScanning();
             btnDrawer.Text = "Scanning...";
             progressIndicator.IsEnabled = true;
             progressIndicator.IsVisible = true;
@@ -111,16 +90,33 @@ public partial class ScanViewPage : ContentPage
         {
             isTorch = false;
             torchImage.Source = "flashoff";
-            textCaptureScan.EnableTorch(false);
+            barcodeCaptureScan.EnableTorch(false);
 
         }
         else
         {
             isTorch = true;
             torchImage.Source = "flashon";
-            textCaptureScan.EnableTorch(true);
+            barcodeCaptureScan.EnableTorch(true);
         }
     }
-    
+
+    async void barcodeCaptureScan_OnScanResult(System.Object result)
+    {
+        var ScannedResult = result as string;
+        await MainThread.InvokeOnMainThreadAsync(() =>
+        {
+            if (isScanflow)
+            {
+
+                MopupService.Instance.PushAsync(new BarcodeResultPopup(ScannedResult));
+                btnDrawer.Text = "Capture";
+                progressIndicator.IsRunning = false;
+                btnDrawer.IsEnabled = true;
+                isScanflow = false;
+            }
+
+        });
+    }
 }
 

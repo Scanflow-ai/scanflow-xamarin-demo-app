@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+  
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvHeadingSettings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/txt_settings"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/ivClose"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvHeadingSettings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvHeadingSettings" />
+
+                <View
+                    android:id="@+id/viewTopLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/viewBgLineColor_alpha30"
+                    app:layout_constraintTop_toBottomOf="@+id/ivClose" />
+
+                <CheckBox
+                    android:id="@+id/cbAutoFlashLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewTopLine" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_enable_auto_flashlight"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbAutoFlashLight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cbAutoFlashLight"
+                    app:layout_constraintTop_toTopOf="@+id/cbAutoFlashLight" />
+
+                <CheckBox
+                    android:id="@+id/cbAutoExposure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbAutoFlashLight" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_enable_auto_exposure"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbAutoExposure"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cbAutoExposure"
+                    app:layout_constraintTop_toTopOf="@+id/cbAutoExposure" />
+
+                <TextView
+                    android:id="@+id/tvTitleZoomOption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/txt_zoom_option"
+                    android:textColor="@color/settings_heading_color"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbAutoExposure" />
+
+                <RadioGroup
+                    android:id="@+id/rgZoomOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleZoomOption">
+
+                    <RadioButton
+                        android:id="@+id/rbOneTouchZoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/txt_enable_one_touch_zoom"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbAutoZoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/txt_enable_auto_zoom"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbZoomNone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/txt_none"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvTitleSelectResolution"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/txt_select_resolution"
+                    android:textColor="@color/settings_heading_color"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rgZoomOptions" />
+
+                <RadioGroup
+                    android:id="@+id/rgResolutionOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleSelectResolution">
+
+                    <RadioButton
+                        android:id="@+id/rbSd480P"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/txt_sd_480p"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbHd720P"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/txt_hd_720p"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFullHd1080P"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/txt_full_hd_1080p"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rb4k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="@string/txt_4k"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_button_round_corners_without_fillcolors"
+            android:paddingVertical="10sp"
+            android:text="@string/txt_cancel"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnApply"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/btnApply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_button_round_corners"
+            android:paddingVertical="10sp"
+            android:text="@string/txt_apply"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnCancel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

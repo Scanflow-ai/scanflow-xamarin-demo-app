@@ -1,22 +1,16 @@
 ﻿using Android;
 using Android.App;
-using Android.Content;
 using Android.Content.PM;
-using Android.Media;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using AndroidX.RecyclerView.Widget;
+using Scanflow.Xamarin.Android;
 using Scanflow.Xamarin.Android.Helper;
 using Scanflow.Xamarin.Android.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using static AndroidX.RecyclerView.Widget.RecyclerView;
 
-namespace Scanflow.Xamarin.Android.Activities
+namespace Scanflow.Xamarin
 {
     [Activity(Label = "HomeActivity")]
     public class HomeActivity : Activity
@@ -35,12 +29,13 @@ namespace Scanflow.Xamarin.Android.Activities
             SetContentView(Resource.Layout.Homelayout);
             InitData();
             recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
-            recyclerView.HasFixedSize= true;
+            //recyclerView.HasFixedSize= true;
             layoutManager = new LinearLayoutManager(this);  
             recyclerView.SetLayoutManager(layoutManager);
-            adapter = new RecyclerViewAdapter(list);
+            adapter = new RecyclerViewAdapter(list,this);
             recyclerView.SetLayoutManager(new GridLayoutManager(this, 3));
             recyclerView.SetAdapter(adapter);
+            recyclerView.SetBackgroundColor(Color.Transparent);
 
             if (CheckSelfPermission(Manifest.Permission.Camera) != Permission.Granted)
             {
@@ -71,12 +66,12 @@ namespace Scanflow.Xamarin.Android.Activities
             list.Add(new Scanners() { imgid=Resource.Drawable.qr_code, description="QR CODE"});
             list.Add(new Scanners() { imgid = Resource.Drawable.barcode, description = "Barcode" });
             list.Add(new Scanners() { imgid = Resource.Drawable.any, description = "Any" });
-            list.Add(new Scanners() { imgid = Resource.Drawable.batch, description = "Batch/Inventory" });
+            /*list.Add(new Scanners() { imgid = Resource.Drawable.batch, description = "Batch/Inventory" });
             list.Add(new Scanners() { imgid = Resource.Drawable.ic_one_of_many_codes, description = "One of many codes" });
             list.Add(new Scanners() { imgid = Resource.Drawable.ic_pivot_view, description = "Pivot View" });
             list.Add(new Scanners() { imgid = Resource.Drawable.batch, description = "Tyre Scanning" });
             list.Add(new Scanners() { imgid = Resource.Drawable.batch, description = "Vertical Container Scanning" });
-            list.Add(new Scanners() { imgid = Resource.Drawable.batch, description = "Horizontal Container Scanning" });
+            list.Add(new Scanners() { imgid = Resource.Drawable.batch, description = "Horizontal Container Scanning" });*/
         }
 
       

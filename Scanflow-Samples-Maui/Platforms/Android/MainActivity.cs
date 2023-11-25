@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Scanflow.TextCapture.Maui.Platforms.Android;
+using Scanflow.BarcodeCapture.Maui;
 
 namespace ScanflowMaui;
 
@@ -11,6 +11,6 @@ public class MainActivity : MauiAppCompatActivity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        ScanflowTextCapture.Initialize(this);
+        ScanflowBarcodeCapture.InitScanflowActivity = this;
     }
 }

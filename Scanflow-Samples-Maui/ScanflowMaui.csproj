@@ -93,7 +93,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Mopups" Version="1.1.1" />
 		<PackageReference Include="Plugin.Permissions" Version="6.0.1" />
-		<PackageReference Include="Scanflow.TextCapture.Maui" Version="1.2.2" />
+		<PackageReference Include="Scanflow.BarcodeCapture.Maui" Version="1.2.1" />
 	
 	</ItemGroup>
 
@@ -118,9 +118,6 @@
 	  <MauiXaml Update="Views\SettingPopupPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\TextCaptureResultPopup.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\WelcomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -136,4 +133,22 @@
 
 	
 
+	<ItemGroup>
+	  <BundleResource Include="$(NuGetPackageRoot)inputkit.maui/4.3.0/contentFiles/any/net7.0-android33.0/icon512.png" Condition="Exists('$(NuGetPackageRoot)inputkit.maui/4.3.0/contentFiles/any/net7.0-android33.0/icon512.png')">
+	    <NuGetPackageId>InputKit.Maui</NuGetPackageId>
+	    <NuGetPackageVersion>4.3.0</NuGetPackageVersion>
+	    <NuGetItemType>None</NuGetItemType>
+	    <Pack>false</Pack>
+	    <Private>False</Private>
+	    <Link>icon512.png</Link>
+	  </BundleResource>
+	  <BundleResource Include="$(NuGetPackageRoot)inputkit.maui/4.3.0/contentFiles/any/net7.0-android33.0/icon512.png" Condition="Exists('$(NuGetPackageRoot)inputkit.maui/4.3.0/contentFiles/any/net7.0-android33.0/icon512.png')">
+	    <NuGetPackageId>InputKit.Maui</NuGetPackageId>
+	    <NuGetPackageVersion>4.3.0</NuGetPackageVersion>
+	    <NuGetItemType>None</NuGetItemType>
+	    <Pack>false</Pack>
+	    <Private>False</Private>
+	    <Link>icon512.png</Link>
+	  </BundleResource>
+	</ItemGroup>
 </Project>

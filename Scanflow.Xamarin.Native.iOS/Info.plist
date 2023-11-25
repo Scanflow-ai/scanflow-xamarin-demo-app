@@ -7,11 +7,15 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.obs.smileable</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.4</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MinimumOSVersion</key>
+	<string>11.0</string>
+	<key>NSCameraUsageDescription</key>
+	<string>New Entry</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -31,8 +35,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>MinimumOSVersion</key>
-	<string>16.4</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -63,7 +65,5 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
-	<key>NSCameraUsageDescription</key>
-	<string>New Entry</string>
 </dict>
 </plist>

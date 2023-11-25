@@ -1,9 +1,10 @@
-﻿using Android.App;
+﻿using Android;
+using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.App;
+using AndroidX.Fragment.App;
 using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
@@ -14,11 +15,17 @@ using Com.Scanflow.Datacapture.Model;
 using Com.Scanflow.Datacapture.Sfbarcode;
 using Google.Android.Material.BottomSheet;
 using Java.Util;
+using Scanflow.Xamarin.Activities;
+using Scanflow.Xamarin.Android;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Contexts;
+using Xamarin.Essentials;
+using Context = Android.Content.Context;
 using Timer = System.Timers.Timer;
+using Android.Support.V4.App;
 
-namespace Scanflow.Xamarin.Android.Activities
+namespace Scanflow.Xamarin
 {
     [Activity(Label = "ScanActivity")]
     public class ScanActivity : AppCompatActivity, ScanflowReader.IOnBarcodeScanResultCallback
@@ -33,66 +40,69 @@ namespace Scanflow.Xamarin.Android.Activities
         public bool Isflash = false;
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-
-            SetContentView(Resource.Layout.BarcodeScanLayout);
-            var preview = this.FindViewById<SFCameraView>(Resource.Id.scanflowView);
-            var title = this.FindViewById<TextView>(Resource.Id.textView);
-            flashBtn = this.FindViewById<ImageView>(Resource.Id.ivFlashLight);
-            var backBtn = this.FindViewById<ImageView>(Resource.Id.ivBack);
-            var settingsBtn = this.FindViewById<ImageView>(Resource.Id.ivSettings);
-            tvResult = this.FindViewById<TextView>(Resource.Id.tvResult);
-            var copyBtn = this.FindViewById<ImageView>(Resource.Id.ivCopyResult);
-            bottomSheetBehavior = BottomSheetBehavior.From(this.FindViewById<View>(Resource.Id.bottomSheet));
-            bottomSheet = this.FindViewById<View>(Resource.Id.bottomSheet);
-            bottomSheet.Click += BottomSheet_Click;
-            flashBtn.Click += FlashBtn_Click;
-            copyBtn.Click += CopyBtn_Click;
-            backBtn.Click += BackBtn_Click;
-            flashBtn.SetImageResource(Resource.Drawable.ic_flash_disable);
-            if (Intent.HasExtra("ScanType"))
+            try
             {
-                string ScanType = Intent.GetStringExtra("ScanType");
-                if (ScanType == "QR CODE")
+                base.OnCreate(savedInstanceState);
+
+                SetContentView(Resource.Layout.BarcodeScanLayout);
+                var preview = this.FindViewById<SFCameraView>(Resource.Id.scanflowView);
+                var title = this.FindViewById<TextView>(Resource.Id.textView);
+                flashBtn = this.FindViewById<ImageView>(Resource.Id.ivFlashLight);
+                var backBtn = this.FindViewById<ImageView>(Resource.Id.ivBack);
+                //var settingsBtn = this.FindViewById<ImageView>(Resource.Id.ivSettings);
+                tvResult = this.FindViewById<TextView>(Resource.Id.tvResult);
+                var copyBtn = this.FindViewById<ImageView>(Resource.Id.ivCopyResult);
+                bottomSheetBehavior = BottomSheetBehavior.From(this.FindViewById<View>(Resource.Id.bottomSheet));
+                bottomSheet = this.FindViewById<View>(Resource.Id.bottomSheet);
+                bottomSheet.Click += BottomSheet_Click;
+                flashBtn.Click += FlashBtn_Click;
+                copyBtn.Click += CopyBtn_Click;
+                backBtn.Click += BackBtn_Click;
+                //settingsBtn.Click += SettingsBtn_Click;
+                flashBtn.SetImageResource(Resource.Drawable.ic_flash_disable);
+                if (Intent.HasExtra("ScanType"))
                 {
-                    decodeConfig = DecodeConfig.Qrcode;
-                    title.Text = "QR CODE";
-                }
-                else if (ScanType == "Barcode")
-                {
-                    decodeConfig = DecodeConfig.Barcode;
-                    title.Text = "Barcode";
-                }
-                else if (ScanType == "Any")
-                {
-                    decodeConfig = DecodeConfig.Any;
-                    title.Text = "Any";
-                }
-                else if (ScanType == "Batch/Inventory")
-                {
-                    decodeConfig = DecodeConfig.BatchInventory;
-                    title.Text = "Batch/Inventory";
-                }
-                else if (ScanType == "One of many codes")
-                {
-                    decodeConfig = DecodeConfig.OneOfMany;
-                    title.Text = "One of many codes";
-                }
-                else
-                {
-                    decodeConfig = DecodeConfig.PivotView;
-                    title.Text = "Pivot View";
+                    string ScanType = Intent.GetStringExtra("ScanType");
+                    if (ScanType == "QR CODE")
+                    {
+                        decodeConfig = DecodeConfig.Qrcode;
+                        title.Text = "QR CODE";
+                    }
+                    else if (ScanType == "Barcode")
+                    {
+                        decodeConfig = DecodeConfig.Barcode;
+                        title.Text = "Barcode";
+                    }
+                    else
+                    {
+                        decodeConfig = DecodeConfig.Any;
+                        title.Text = "Any";
+                    }
+
+                    //Note : Install the latest version of Xamarin.AndroidX.Camera.View NuGet Package to avoid GetInstance errors
+                    
+                    mBarcodeReader = SFBarcodeCaptureSession.Instance.CreateScanSession(this, "Your License Key", preview, decodeConfig, 0.4f);
+                    mBarcodeReader?.SetOnBarcodeScanResultCallback(this); // Result Call Back
+                    mBarcodeReader?.SetEnableLocationTracking(false);
                 }
 
-                mBarcodeReader = SFBarcodeCaptureSession.Instance.CreateScanSession(this, "b0febcacca30d073e104af811f939b9608984b60", preview, decodeConfig, 0.4f);
-                mBarcodeReader?.SetOnBarcodeScanResultCallback(this);
-                mBarcodeReader?.SetEnableLocationTracking(true);
+               // Note:  Check Camera permission is allowed before starting a camera.
+                if (ActivityCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == (int)Permission.Granted)
+                {
+                    mBarcodeReader?.StartCamera();
+                }
             }
-            if (ActivityCompat.CheckSelfPermission(this, Android.Manifest.Permission.Camera) == (int)Permission.Granted)
+            catch(Exception Ex)
             {
-                mBarcodeReader?.StartCamera();
+                Toast.MakeText(this, Ex.ToString(), ToastLength.Short).Show();
             }
+        }
 
+        private void SettingsBtn_Click(object sender, EventArgs e)
+        {
+            var transaction = SupportFragmentManager.BeginTransaction();
+            var dialogFragment = new SettingsActivity();
+            dialogFragment.Show(transaction, "my_popup");
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
@@ -112,18 +122,12 @@ namespace Scanflow.Xamarin.Android.Activities
             {
                 Isflash = true;
                 flashBtn.SetImageResource(Resource.Drawable.ic_flash_enable);
-                mBarcodeReader.EnableTorch(false);
+                mBarcodeReader.EnableTorch(true);
             }
         }
 
         private void BottomSheet_Click(object sender, System.EventArgs e)
         {
-            if (timer != null)
-            {
-                timer.Stop();
-                timer = null;
-            }
-
             this.RunOnUiThread(() =>
             {
                 bottomSheetBehavior.State = BottomSheetBehavior.StateCollapsed;
@@ -141,94 +145,55 @@ namespace Scanflow.Xamarin.Android.Activities
             Toast.MakeText(this, "Text copied", ToastLength.Short).Show();
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-
-
+            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
 
 
-        public void OnBatchScanResultSuccess(IList<ScanResultSuccess> result)
-        {
+        #region [Scan Results]
 
-        }
+        public void OnBatchScanResultSuccess(IList<ScanResultSuccess> result) { }
+       
+        public void OnOneOfManyCodeResult(HashSet results) { }
+        
+        public void OnOneofManyCodeRemoved(OneOFManyCodesScanResults result) { }
+        
+        public void OnOneofManyCodeSelected(OneOFManyCodesScanResults result) { }
+       
+        public void OnScanBarcodeDetection(bool isDetected) { }
+      
+        public void OnScanResultFailure(string error) { }
+        
 
-
-
-        public void OnOneOfManyCodeResult(HashSet results)
-        {
-
-        }
-
-
-
-        public void OnOneofManyCodeRemoved(OneOFManyCodesScanResults result)
-        {
-
-        }
-
-
-
-        public void OnOneofManyCodeSelected(OneOFManyCodesScanResults result)
-        {
-
-        }
-
-
-
-        public void OnScanBarcodeDetection(bool isDetected)
-        {
-
-        }
-
-
-
-        public void OnScanResultFailure(string error)
-        {
-
-        }
-
-
-
+        // Barcode , QR , Any Results CallBack
         public void OnScanResultSuccess(ScanResultSuccess result)
         {
-            ShowResultDataNew(result);
+            ShowResultDataNew(result.Text);
         }
 
-        void ShowResultDataNew(ScanResultSuccess result)
+        void ShowResultDataNew(string result)
         {
-            if (timer != null)
-            {
-                timer.Stop();
-                timer = null;
-            }
-
+          
             this.RunOnUiThread(() =>
             {
-                tvResult.Text = result.Text;
+                tvResult.Text = result;
 
-                timer = new Timer(1000);
-                timer.Elapsed += (sender, e) =>
+                if (bottomSheetBehavior.State != BottomSheetBehavior.StateHalfExpanded)
                 {
-                    if (bottomSheetBehavior.State != BottomSheetBehavior.StateHalfExpanded)
+                    this.RunOnUiThread(() =>
                     {
-                        this.RunOnUiThread(() =>
-                        {
-                            bottomSheetBehavior.State = BottomSheetBehavior.StateHalfExpanded;
-                            bottomSheet.Visibility = ViewStates.Visible;
-                        });
-                    }
-                };
-                timer.AutoReset = true;
-                timer.Start();
+                        bottomSheetBehavior.State = BottomSheetBehavior.StateHalfExpanded;
+                        bottomSheet.Visibility = ViewStates.Visible;
+                    });
+                }
+               
             });
         }
 
-       
+        #endregion
 
     }
 }

@@ -1,19 +1,14 @@
 ﻿using CoreGraphics;
 using CoreLocation;
 using CoreVideo;
-using Foundation;
 using Scanflow.BarcodeCapture.Xamarin.iOS;
-using Scanflow.TextCapture.Xamarin.iOS;
 using System;
 using UIKit;
 using Xamarin.Essentials;
-using IScanflowCameraManagerDelegate = Scanflow.TextCapture.Xamarin.iOS.IScanflowCameraManagerDelegate;
-using OverlayViewApperance = Scanflow.TextCapture.Xamarin.iOS.OverlayViewApperance;
-using ScannerMode = Scanflow.TextCapture.Xamarin.iOS.ScannerMode;
 
 namespace Scanflow.Xamarin.Native.iOS
 {
-    public partial class ViewController : UIViewController, IScanflowCameraManagerDelegate
+    public partial class ViewController : UIViewController //, IScanflowCameraManagerDelegate
     {
         public ViewController (IntPtr handle) : base (handle)
         {
@@ -24,7 +19,7 @@ namespace Scanflow.Xamarin.Native.iOS
             base.ViewDidLoad ();
             var status = await Permissions.CheckStatusAsync<Permissions.Camera>();
 
-            if (status != PermissionStatus.Granted)
+           /* if (status != PermissionStatus.Granted)
             {
                 // Request camera permission
                 status = await Permissions.RequestAsync<Permissions.Camera>();
@@ -49,7 +44,7 @@ namespace Scanflow.Xamarin.Native.iOS
                 scanflowBarCodeManager.WeakDelegate = this;
                 scanflowBarCodeManager.StartSession();
 
-            }
+            }*/
         }
 
         public override void DidReceiveMemoryWarning ()

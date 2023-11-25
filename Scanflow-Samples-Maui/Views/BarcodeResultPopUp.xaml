@@ -1,10 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ScanflowMaui.Views.TextCaptureResultPopup"
+             x:Class="ScanflowMaui.Views.BarcodeResultPopup"
               xmlns:controls="clr-namespace:ScanflowMaui.CustomControl"      
-              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups" CloseWhenBackgroundIsClicked="False"
-              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui" HeightRequest="250" BackgroundColor="Transparent" >
+              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+              CloseWhenBackgroundIsClicked="False"
+              xmlns:input="clr-namespace:InputKit.Shared.Controls;assembly=InputKit.Maui"
+              HeightRequest="150"
+              BackgroundColor="Transparent" >
     <Frame BackgroundColor="White" HeightRequest="250" VerticalOptions="End">
         <StackLayout  Orientation="Vertical" VerticalOptions="End">
             <Grid>
@@ -22,7 +25,6 @@
                     </Image.GestureRecognizers>
                 </Image>
             </StackLayout>
-            <Image x:Name="scanImage" HeightRequest="120" Margin="15" />
         </StackLayout>
     </Frame>
    

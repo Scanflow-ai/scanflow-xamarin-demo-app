@@ -4,8 +4,7 @@ using CoreGraphics;
 using Scanflow.Xamarin.Native.iOS.Models;
 using Foundation;
 using System.Collections.Generic;
-using OverlayViewApperance = Scanflow.TextCapture.Xamarin.iOS.OverlayViewApperance;
-using ScannerMode = Scanflow.TextCapture.Xamarin.iOS.ScannerMode;
+using ScannerMode = Scanflow.BarcodeCapture.Xamarin.iOS;
 
 namespace Scanflow.Xamarin.Native.iOS
 {
@@ -69,13 +68,13 @@ namespace Scanflow.Xamarin.Native.iOS
 {
     new HomePageIcons("QR Code", UIImage.FromBundle("QR Code")),
     new HomePageIcons("Bar Code", UIImage.FromBundle("BarCode")),
-    new HomePageIcons("Any", UIImage.FromBundle("Any")),
-    new HomePageIcons("Batch/Inventory", UIImage.FromBundle("BatchInventory")),
+    new HomePageIcons("Any", UIImage.FromBundle("Any"))
+    /*new HomePageIcons("Batch/Inventory", UIImage.FromBundle("BatchInventory")),
     new HomePageIcons("One of many codes", UIImage.FromBundle("OneofMany")),
-    new HomePageIcons("Pivot View", UIImage.FromBundle("PivotView")),
+    new HomePageIcons("Pivot View", UIImage.FromBundle("PivotView"))
     new HomePageIcons("Tire Scanning", UIImage.FromBundle("DoumentScanning")),
     new HomePageIcons("Container Horizontal Scanning", UIImage.FromBundle("ContainerScanning")),
-    new HomePageIcons("Container Vertical Scanning", UIImage.FromBundle("ContainerScanning"))
+    new HomePageIcons("Container Vertical Scanning", UIImage.FromBundle("ContainerScanning"))*/
 };
                 return homepageicons.Count;
             }
@@ -119,30 +118,30 @@ namespace Scanflow.Xamarin.Native.iOS
                 switch (indexPath.Row)
                 {
                     case 0:
-                        cameraViewController.scannerMode = ScannerMode.QRCode;
-                        cameraViewController.overlayViewApperance = OverlayViewApperance.Square;
+                        cameraViewController.scannerMode = BarcodeCapture.Xamarin.iOS.ScannerMode.Qrcode;
+                        cameraViewController.overlayViewApperance = BarcodeCapture.Xamarin.iOS.OverlayViewApperance.Square;
                         break;
                     case 1:
-                        cameraViewController.scannerMode = ScannerMode.Barcode;
-                        cameraViewController.overlayViewApperance = OverlayViewApperance.Square;
+                        cameraViewController.scannerMode = BarcodeCapture.Xamarin.iOS.ScannerMode.Barcode;
+                        cameraViewController.overlayViewApperance = BarcodeCapture.Xamarin.iOS.OverlayViewApperance.Square;
                         break;
                     case 2:
-                        cameraViewController.scannerMode = ScannerMode.Any;
-                        cameraViewController.overlayViewApperance = OverlayViewApperance.Hide;
+                        cameraViewController.scannerMode = BarcodeCapture.Xamarin.iOS.ScannerMode.Any;
+                        cameraViewController.overlayViewApperance = BarcodeCapture.Xamarin.iOS.OverlayViewApperance.Square;
                         break;
                     case 3:
-                        cameraViewController.scannerMode = ScannerMode.BatchInventory;
-                        cameraViewController.overlayViewApperance = OverlayViewApperance.Hide;
+                        cameraViewController.scannerMode = BarcodeCapture.Xamarin.iOS.ScannerMode.BatchInventory;
+                        cameraViewController.overlayViewApperance = BarcodeCapture.Xamarin.iOS.OverlayViewApperance.Hide;
                         break;
                     case 4:
-                        cameraViewController.scannerMode = ScannerMode.OneOfMany;
-                        cameraViewController.overlayViewApperance = OverlayViewApperance.Hide;
+                        cameraViewController.scannerMode = BarcodeCapture.Xamarin.iOS.ScannerMode.OneOfMany;
+                        cameraViewController.overlayViewApperance = BarcodeCapture.Xamarin.iOS.OverlayViewApperance.Hide;
                         break;
                     case 5:
-                        cameraViewController.scannerMode = ScannerMode.PivotView;
-                        cameraViewController.overlayViewApperance = OverlayViewApperance.Square;
+                        cameraViewController.scannerMode = BarcodeCapture.Xamarin.iOS.ScannerMode.PivotView;
+                        cameraViewController.overlayViewApperance = BarcodeCapture.Xamarin.iOS.OverlayViewApperance.Square;
                         break;
-                    case 6:
+                   /* case 6:
                         cameraViewController.scannerMode = ScannerMode.Tire;
                         cameraViewController.overlayViewApperance = OverlayViewApperance.ContainerHorizantal;
                         break;
@@ -153,7 +152,7 @@ namespace Scanflow.Xamarin.Native.iOS
                     case 8:
                         cameraViewController.scannerMode = ScannerMode.ContainerVertical;
                         cameraViewController.overlayViewApperance = OverlayViewApperance.ContainerVertical;
-                        break;
+                        break;*/
 
                 }
                 if (cameraViewController != null)

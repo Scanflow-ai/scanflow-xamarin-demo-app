@@ -5,16 +5,13 @@ using Android.OS;
 using Android.Preferences;
 using Android.Runtime;
 using Android.Support.V4.View;
-using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
-using AndroidX.Core.Widget;
-using Scanflow.Xamarin.Android.Activities;
+using Scanflow.Xamarin.Android;
 using Scanflow.Xamarin.Android.Helper;
-using System.Drawing;
-using static Android.Icu.Text.Transliterator;
+using Xamarin.Essentials;
 
-namespace Scanflow.Xamarin.Android
+namespace Scanflow.Xamarin
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
@@ -29,7 +26,7 @@ namespace Scanflow.Xamarin.Android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Platform.Init(this, savedInstanceState);
 
             ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(Application.Context);
 
@@ -63,9 +60,9 @@ namespace Scanflow.Xamarin.Android
 
         }
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }

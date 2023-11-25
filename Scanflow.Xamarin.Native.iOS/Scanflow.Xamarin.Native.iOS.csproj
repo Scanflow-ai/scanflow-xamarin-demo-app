@@ -27,6 +27,8 @@
         <MtouchLink>None</MtouchLink>
         <MtouchDebug>true</MtouchDebug>
         <MtouchSdkVersion>16.4</MtouchSdkVersion>
+        <CodesignProvision></CodesignProvision>
+        <CodesignKey>iPhone Distribution</CodesignKey>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
         <DebugType>none</DebugType>
@@ -36,6 +38,8 @@
         <WarningLevel>4</WarningLevel>
         <MtouchLink>None</MtouchLink>
         <MtouchArch>x86_64</MtouchArch>
+        <CodesignProvision>Scanflow_dev_profile</CodesignProvision>
+        <CodesignKey>Apple Development: Jayakumar Radhakrishnan (RJBMR3D2W2)</CodesignKey>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
         <DebugSymbols>true</DebugSymbols>
@@ -51,6 +55,7 @@
         <MtouchDebug>true</MtouchDebug>
         <MtouchLink>None</MtouchLink>
         <MtouchInterpreter>-all</MtouchInterpreter>
+        <CodesignProvision>Automatic</CodesignProvision>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
         <DebugType>none</DebugType>
@@ -61,6 +66,8 @@
         <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
         <MtouchArch>ARM64</MtouchArch>
         <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchExtraArgs>--optimize=-remove-dynamic-registrar</MtouchExtraArgs>
+        <CodesignProvision>Scanflow_dev_profile</CodesignProvision>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="System" />
@@ -72,180 +79,14 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
-      <PackageReference Include="Scanflow.TextCapture.Xamarin.iOS">
-        <Version>1.2.1</Version>
-      </PackageReference>
-      <PackageReference Include="Scanflow.BarcodeCapture.Xamarin.iOS">
-        <Version>1.0.0</Version>
-      </PackageReference>
       <PackageReference Include="Toast.iOS">
         <Version>1.2.0</Version>
       </PackageReference>
-    </ItemGroup>
-    <ItemGroup>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-            <Visible>false</Visible>
-        </ImageAsset>
-        <ImageAsset Include="Assets.xcassets\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\FlashON.imageset\Component 236-2.pdf" />
-        <ImageAsset Include="Assets.xcassets\FlashON.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\Any.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\Any.imageset\Component 243.pdf" />
-        <ImageAsset Include="Assets.xcassets\Logo.imageset\Scanflow.pdf" />
-        <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\AppColors\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\AppColors\DarkBlack.colorset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\AppColors\CustomLightGrey.colorset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton4.imageset\Group 1.pdf" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton4.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton2.imageset\SkipButton2.pdf" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton2.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton3.imageset\SkipButton3.pdf" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton3.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton1.imageset\SkipButton1.pdf" />
-        <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton1.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\CopyIcon.imageset\Frame 1000001935.pdf" />
-        <ImageAsset Include="Assets.xcassets\CopyIcon.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\OneofMany.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\OneofMany.imageset\Component 246.pdf" />
-        <ImageAsset Include="Assets.xcassets\Checkbox.imageset\Rectangle 1.pdf" />
-        <ImageAsset Include="Assets.xcassets\Checkbox.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BackArrow.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BackArrow.imageset\arrow-left.pdf" />
-        <ImageAsset Include="Assets.xcassets\BarCode.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BarCode.imageset\Component 242.pdf" />
-        <ImageAsset Include="Assets.xcassets\Setting.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\Setting.imageset\Frame 3467078.pdf" />
-        <ImageAsset Include="Assets.xcassets\ID Card.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\ID Card.imageset\Component 245.pdf" />
-        <ImageAsset Include="Assets.xcassets\Radiobutton.imageset\circle.pdf" />
-        <ImageAsset Include="Assets.xcassets\Radiobutton.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\Close.imageset\x.pdf" />
-        <ImageAsset Include="Assets.xcassets\Close.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\oneTouchZoom.imageset\vector-2.svg" />
-        <ImageAsset Include="Assets.xcassets\oneTouchZoom.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\tick.imageset\27889-3-green-tick-2-2.png" />
-        <ImageAsset Include="Assets.xcassets\tick.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\AccentColor.colorset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\FlashOff.imageset\Component 236.pdf" />
-        <ImageAsset Include="Assets.xcassets\FlashOff.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen1.imageset\OnboardScreen1.pdf" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen1.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen3.imageset\OnboardScreen3.pdf" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen3.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen2.imageset\OnboardScreen2.pdf" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen2.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen4.imageset\OnboardScreen4.pdf" />
-        <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen4.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\RadiobuttonFill.imageset\circle.png" />
-        <ImageAsset Include="Assets.xcassets\RadiobuttonFill.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\PivotView.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\PivotView.imageset\Component 244.pdf" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\LeftBottom.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\LeftBottom.imageset\Vector 1-2.pdf" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\RightBottom.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\RightBottom.imageset\Vector 2-2.pdf" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\LeftTop.imageset\Vector 1.pdf" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\LeftTop.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\RightTop.imageset\Vector 2.pdf" />
-        <ImageAsset Include="Assets.xcassets\BoundingBox\RightTop.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\DoumentScanning.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\DoumentScanning.imageset\Component 247.pdf" />
-        <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\tick%403x.png" />
-        <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\tick%402x.png" />
-        <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\tick%401x.png" />
-        <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\BatchInventory.imageset\Frame 1000001936.pdf" />
-        <ImageAsset Include="Assets.xcassets\BatchInventory.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\QR Code.imageset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\QR Code.imageset\Component 241.pdf" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-16.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-256.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-120.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-88.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-144.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-76.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-60.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-48.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-1024.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-152.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-180.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-64.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-58.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-72.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-196.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-80.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-57.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-55.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-172.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-167.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-40.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-50.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-87.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Contents.json" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-20.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-128.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-100.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-114.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-32.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-30.png" />
-        <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-512.png" />
-        <ImageAsset Include="Assets.xcassets\ContainerScanning.imageset\ContainerScanning.pdf" />
-        <ImageAsset Include="Assets.xcassets\ContainerScanning.imageset\Contents.json" />
+      <PackageReference Include="Scanflow.BarcodeCapture.Xamarin.iOS" Version="2.0.1" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
         <Folder Include="Models\" />
-    </ItemGroup>
-    <ItemGroup>
-        <InterfaceDefinition Include="LaunchScreen.storyboard" />
-        <InterfaceDefinition Include="Main.storyboard" />
-    </ItemGroup>
-    <ItemGroup>
-        <None Include="Info.plist" />
-        <None Include="Entitlements.plist" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Main.cs" />
@@ -295,6 +136,138 @@
         <Compile Include="CameraViewController.designer.cs">
           <DependentUpon>CameraViewController.cs</DependentUpon>
         </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <InterfaceDefinition Include="Main.storyboard" />
+      <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="Info.plist" />
+    </ItemGroup>
+    <ItemGroup>
+      <ImageAsset Include="Assets.xcassets\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\FlashON.imageset\Component 236-2.pdf" />
+      <ImageAsset Include="Assets.xcassets\FlashON.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\ContainerScanning.imageset\ContainerScanning.pdf" />
+      <ImageAsset Include="Assets.xcassets\ContainerScanning.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\Any.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\Any.imageset\Component 243.pdf" />
+      <ImageAsset Include="Assets.xcassets\Logo.imageset\Scanflow.pdf" />
+      <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AppColors\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AppColors\DarkBlack.colorset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AppColors\CustomLightGrey.colorset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton4.imageset\Group 1.pdf" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton4.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton2.imageset\SkipButton2.pdf" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton2.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton3.imageset\SkipButton3.pdf" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton3.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton1.imageset\SkipButton1.pdf" />
+      <ImageAsset Include="Assets.xcassets\SkipButton\SkipButton1.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\CopyIcon.imageset\Frame 1000001935.pdf" />
+      <ImageAsset Include="Assets.xcassets\CopyIcon.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\OneofMany.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\OneofMany.imageset\Component 246.pdf" />
+      <ImageAsset Include="Assets.xcassets\Checkbox.imageset\Rectangle 1.pdf" />
+      <ImageAsset Include="Assets.xcassets\Checkbox.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BackArrow.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BackArrow.imageset\arrow-left.pdf" />
+      <ImageAsset Include="Assets.xcassets\BarCode.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BarCode.imageset\Component 242.pdf" />
+      <ImageAsset Include="Assets.xcassets\Setting.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\Setting.imageset\Frame 3467078.pdf" />
+      <ImageAsset Include="Assets.xcassets\ID Card.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\ID Card.imageset\Component 245.pdf" />
+      <ImageAsset Include="Assets.xcassets\Radiobutton.imageset\circle.pdf" />
+      <ImageAsset Include="Assets.xcassets\Radiobutton.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\Close.imageset\x.pdf" />
+      <ImageAsset Include="Assets.xcassets\Close.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\oneTouchZoom.imageset\vector-2.svg" />
+      <ImageAsset Include="Assets.xcassets\oneTouchZoom.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png" />
+      <ImageAsset Include="Assets.xcassets\tick.imageset\27889-3-green-tick-2-2.png" />
+      <ImageAsset Include="Assets.xcassets\tick.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AccentColor.colorset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\FlashOff.imageset\Component 236.pdf" />
+      <ImageAsset Include="Assets.xcassets\FlashOff.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen1.imageset\OnboardScreen1.pdf" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen1.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen3.imageset\OnboardScreen3.pdf" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen3.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen2.imageset\OnboardScreen2.pdf" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen2.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen4.imageset\OnboardScreen4.pdf" />
+      <ImageAsset Include="Assets.xcassets\OnboardScreens\OnboardScreen4.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\RadiobuttonFill.imageset\circle.png" />
+      <ImageAsset Include="Assets.xcassets\RadiobuttonFill.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\PivotView.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\PivotView.imageset\Component 244.pdf" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\LeftBottom.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\LeftBottom.imageset\Vector 1-2.pdf" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\RightBottom.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\RightBottom.imageset\Vector 2-2.pdf" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\LeftTop.imageset\Vector 1.pdf" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\LeftTop.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\RightTop.imageset\Vector 2.pdf" />
+      <ImageAsset Include="Assets.xcassets\BoundingBox\RightTop.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\DoumentScanning.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\DoumentScanning.imageset\Component 247.pdf" />
+      <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\tick%403x.png" />
+      <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\tick%402x.png" />
+      <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\tick%401x.png" />
+      <ImageAsset Include="Assets.xcassets\CheckBoxFill.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\BatchInventory.imageset\Frame 1000001936.pdf" />
+      <ImageAsset Include="Assets.xcassets\BatchInventory.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\QR Code.imageset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\QR Code.imageset\Component 241.pdf" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-16.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-256.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-120.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-88.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-144.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-76.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-60.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-48.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-1024.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-152.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-180.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-64.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-58.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-72.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-196.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-80.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-57.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-55.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-172.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-167.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-40.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-50.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-87.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Contents.json" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-20.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-128.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-100.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-114.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-32.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-30.png" />
+      <ImageAsset Include="Assets.xcassets\AppIcon 1.appiconset\Icon-512.png" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:Scanflow.TextCapture.Maui;assembly=Scanflow.TextCapture.Maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:Scanflow.BarcodeCapture.Maui;assembly=Scanflow.BarcodeCapture.Maui"
              x:Class="ScanflowMaui.Views.ScanViewPage"
              >
     <NavigationPage.TitleView >
@@ -20,7 +19,7 @@
         <Grid>
             <Grid  x:Name="backdrop" >
 
-                <controls:CameraPreview  x:Name="textCaptureScan" OnScanResult="TextCaptureScan_OnScanResult" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <controls:CameraPreview  x:Name="barcodeCaptureScan" OnScanResult="barcodeCaptureScan_OnScanResult" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
                 <Button Text="Capture" x:Name="btnDrawer"  IsVisible="true" Clicked="Button_Clicked" BackgroundColor="#0C54C5" TextColor="White" CornerRadius="35" VerticalOptions="EndAndExpand" Margin="25"
                       />
                 <Image Source="flashon" x:Name="torchImage" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="30" Margin="0,20,20,0">
