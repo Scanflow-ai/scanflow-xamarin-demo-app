@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanflowMaui", "Scanflow-Sa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scanflow-Xamarin-Native", "Scanflow-Xamarin-Native", "{0A11878F-301A-48FF-B256-FAA91FA436B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanflow.Xamarin.Android", "Scanflow.Xamarin.Android\Scanflow.Xamarin.Android.csproj", "{1EDE9B0B-EC6C-438B-AD35-0D5088B62929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanflow.Xamarin", "Scanflow.Xamarin.Android\Scanflow.Xamarin.csproj", "{1EDE9B0B-EC6C-438B-AD35-0D5088B62929}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanflow.Xamarin.Native.iOS", "Scanflow.Xamarin.Native.iOS\Scanflow.Xamarin.Native.iOS.csproj", "{FAF6B00C-F183-44A8-A30F-4BC43A5DDBF5}"
 EndProject
