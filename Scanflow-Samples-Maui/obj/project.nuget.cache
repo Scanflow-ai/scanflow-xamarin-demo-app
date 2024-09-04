@@ -1,0 +1,159 @@
+{
+  "version": 2,
+  "dgSpecHash": "9KkVuNShAUU6r8xWKf7PuiUBo0z3TTzFgG1qdM9PCZrPSHmVFgIejgwLWGlIQqLI5AtWr/REz38Ay+Q+nKHagg==",
+  "success": false,
+  "projectFilePath": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/ScanflowMaui.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.Maui.Graphics"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.NET.ILLink.Analyzers"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.NET.ILLink.Tasks"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Scanflow.BarcodeCapture.Maui"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.Android.Glide"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.AndroidX.Browser"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.AndroidX.Legacy.Support.V4"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.AndroidX.Lifecycle.LiveData"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.AndroidX.Navigation.Common"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.AndroidX.Navigation.Fragment"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.AndroidX.Navigation.Runtime"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.AndroidX.Navigation.UI"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.Google.Android.Material"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.Google.Crypto.Tink.Android"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.Maui.Graphics"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.NET.ILLink.Analyzers"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.NET.ILLink.Tasks"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Scanflow.BarcodeCapture.Maui"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.Extensions.Configuration"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.Maui.Graphics"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.NET.ILLink.Analyzers"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Microsoft.NET.ILLink.Tasks"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Scanflow.BarcodeCapture.Maui"
+    }
+  ]
+}

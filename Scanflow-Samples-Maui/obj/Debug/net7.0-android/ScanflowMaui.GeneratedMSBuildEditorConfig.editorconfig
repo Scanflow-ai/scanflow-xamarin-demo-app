@@ -1,0 +1,79 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ScanflowMaui
+build_property.ProjectDir = /Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/CustomControl/BasePopupPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.CustomControl.BasePopupPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CustomControl/BasePopupPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CustomControl/BasePopupPage.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/Views/BarcodeResultPopUp.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.Views.BarcodeResultPopUp.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/BarcodeResultPopUp.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/BarcodeResultPopUp.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/HomePage.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/Views/ScanViewPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.Views.ScanViewPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/ScanViewPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/ScanViewPage.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/Views/SettingPopupPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.Views.SettingPopupPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SettingPopupPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SettingPopupPage.xaml
+
+[/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow-Samples-Maui/Views/WelcomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ScanflowMaui.Views.WelcomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/WelcomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/WelcomePage.xaml

@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj": {}
+    "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj": {}
   },
   "projects": {
-    "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj": {
+    "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj",
+        "projectUniqueName": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj",
         "projectName": "Scanflow.iOS",
-        "projectPath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj",
-        "packagesPath": "/Users/mac-obs-55/.nuget/packages/",
-        "outputPath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow.iOS/obj/",
+        "projectPath": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.iOS/Scanflow.iOS.csproj",
+        "packagesPath": "/Users/racitsolutionspvtltd/.nuget/packages/",
+        "outputPath": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "/Users/mac-obs-55/.config/NuGet/NuGet.Config"
+          "/Users/racitsolutionspvtltd/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "xamarinios10"

@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.Xamarin.Native.iOS/Scanflow.Xamarin.Native.iOS.csproj": {}
+  },
+  "projects": {
+    "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.Xamarin.Native.iOS/Scanflow.Xamarin.Native.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.Xamarin.Native.iOS/Scanflow.Xamarin.Native.iOS.csproj",
+        "projectName": "Scanflow.Xamarin.Native.iOS",
+        "projectPath": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.Xamarin.Native.iOS/Scanflow.Xamarin.Native.iOS.csproj",
+        "packagesPath": "/Users/racitsolutionspvtltd/.nuget/packages/",
+        "outputPath": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow.Xamarin.Native.iOS/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/racitsolutionspvtltd/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Scanflow.BarcodeCapture.Xamarin.iOS": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Toast.iOS": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

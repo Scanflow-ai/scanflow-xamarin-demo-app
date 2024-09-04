@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = Scanflow
-build_property.ProjectDir = /Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow/
+build_property.ProjectDir = /Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="color" name="bottomLeftCornerColor"/>
+    <attr format="color" name="bottomRightCornerColor"/>
+    <attr format="dimension" name="cornerRadius"/>
+    <attr format="boolean" name="roundedCorner"/>
+    <attr format="boolean" name="showPointerScanLine"/>
+    <attr format="color" name="topLeftCornerColor"/>
+    <attr format="color" name="topRightCornerColor"/>
+    <color name="colorConnected">#4CAF50</color>
+    <color name="colorDisconnected">#FF5252</color>
+    <color name="colorDisconnecting">#FF9800</color>
+    <color name="design_default_color_background">#FFFFFF</color>
+    <color name="mb_transparent">#00000000</color>
+    <color name="viewfinder_border">#FFFFFF</color>
+    <color name="viewfinder_bottomleftcornor">#FFAF4D</color>
+    <color name="viewfinder_bottomrightcornor">#3098F1</color>
+    <color name="viewfinder_corner">#FF1FB3E2</color>
+    <color name="viewfinder_frame">#7F1FB3E2</color>
+    <color name="viewfinder_laser">#FF1FB3E2</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_text_color">#FFC0C0C0</color>
+    <color name="viewfinder_topleftcornor">#2256DE</color>
+    <color name="viewfinder_toprightcornor">#FF543E</color>
+    <dimen name="ar_bounding_box_corner_radius">1dp</dimen>
+    <dimen name="ar_bounding_box_padding">8dp</dimen>
+    <dimen name="ar_bounding_rect_stroke_width">2dp</dimen>
+    <dimen name="ar_scan_beam_stroke_width">2dp</dimen>
+    <integer name="viewfinder_border_length">60</integer>
+    <integer name="viewfinder_border_width">5</integer>
+    <string name="messageConnected">Connected</string>
+    <string name="messageDisconnected">Disconnected</string>
+    <string name="messageDisconnecting">Losing connection</string>
+    <declare-styleable name="SFCameraView">
+        <attr name="topLeftCornerColor"/>
+        <attr name="topRightCornerColor"/>
+        <attr name="bottomLeftCornerColor"/>
+        <attr name="bottomRightCornerColor"/>
+        <attr name="showPointerScanLine"/>
+        <attr name="roundedCorner"/>
+        <attr name="cornerRadius"/>
+        <attr format="integer" name="textCaptureHeightPercentage"/>
+        <attr format="integer" name="textCaptureWidthPercentage"/>
+    </declare-styleable>
+    <declare-styleable name="ViewFinderView">
+        <attr format="color" name="maskColor"/>
+        <attr format="color" name="frameColor"/>
+        <attr format="color" name="cornerColor"/>
+        <attr format="color" name="laserColor"/>
+        <attr format="string" name="labelText"/>
+        <attr format="color" name="labelTextColor"/>
+        <attr format="dimension" name="labelTextSize"/>
+        <attr format="dimension" name="labelTextPadding"/>
+        <attr format="dimension" name="labelTextWidth"/>
+        <attr format="enum" name="labelTextLocation">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+        </attr>
+        <attr format="dimension" name="frameWidth"/>
+        <attr format="dimension" name="frameHeight"/>
+        <attr format="integer" name="gridColumn"/>
+        <attr format="dimension" name="gridHeight"/>
+        <attr format="enum" name="laserStyle">
+            <enum name="none" value="0"/>
+            <enum name="line" value="1"/>
+            <enum name="grid" value="2"/>
+        </attr>
+        <attr format="dimension" name="cornerRectWidth"/>
+        <attr format="dimension" name="cornerRectHeight"/>
+        <attr format="dimension" name="scannerLineMoveDistance"/>
+        <attr format="dimension" name="scannerLineHeight"/>
+        <attr format="dimension" name="frameLineWidth"/>
+        <attr format="integer" name="scannerAnimationDelay"/>
+        <attr format="float" name="frameRatio"/>
+        <attr format="dimension" name="framePaddingLeft"/>
+        <attr format="dimension" name="framePaddingTop"/>
+        <attr format="dimension" name="framePaddingRight"/>
+        <attr format="dimension" name="framePaddingBottom"/>
+        <attr format="enum" name="frameGravity">
+            <enum name="center" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="top" value="2"/>
+            <enum name="right" value="3"/>
+            <enum name="bottom" value="4"/>
+        </attr>
+        <attr format="color" name="pointColor"/>
+        <attr format="color" name="pointStrokeColor"/>
+        <attr format="dimension" name="pointRadius"/>
+        <attr format="float" name="pointStrokeRatio"/>
+        <attr format="reference" name="pointDrawable"/>
+        <attr format="boolean" name="showPointAnim"/>
+        <attr format="reference" name="laserDrawable"/>
+        <attr format="enum" name="viewfinderStyle">
+            <enum name="classic" value="0"/>
+            <enum name="popular" value="1"/>
+        </attr>
+        <attr name="topLeftCornerColor"/>
+        <attr name="topRightCornerColor"/>
+        <attr name="bottomLeftCornerColor"/>
+        <attr name="bottomRightCornerColor"/>
+        <attr name="roundedCorner"/>
+        <attr name="cornerRadius"/>
+    </declare-styleable>
+</resources>

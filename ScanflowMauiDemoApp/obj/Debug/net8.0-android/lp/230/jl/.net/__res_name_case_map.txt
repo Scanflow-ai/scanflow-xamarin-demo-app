@@ -1,0 +1,3 @@
+Layout/OptiScanView.xml;layout/optiscanview.xml
+values/colors.xml;values/colors.xml
+values/styles.xml;values/styles.xml

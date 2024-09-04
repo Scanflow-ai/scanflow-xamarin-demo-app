@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanflow.Xamarin", "Scanflo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanflow.Xamarin.Native.iOS", "Scanflow.Xamarin.Native.iOS\Scanflow.Xamarin.Native.iOS.csproj", "{FAF6B00C-F183-44A8-A30F-4BC43A5DDBF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanflowMauiDemoApp", "ScanflowMauiDemoApp\ScanflowMauiDemoApp.csproj", "{EA15147C-04D2-4BC2-B10E-72E481B3C69B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +105,18 @@ Global
 		{FAF6B00C-F183-44A8-A30F-4BC43A5DDBF5}.Release|iPhone.Build.0 = Release|iPhone
 		{FAF6B00C-F183-44A8-A30F-4BC43A5DDBF5}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{FAF6B00C-F183-44A8-A30F-4BC43A5DDBF5}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Release|iPhone.Build.0 = Release|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,5 +131,6 @@ Global
 		{359BF7CF-6F57-4C88-8534-A6FBDCCDB8F6} = {B2AF5B68-E19A-4EA2-9D30-38C1DAA407A4}
 		{1EDE9B0B-EC6C-438B-AD35-0D5088B62929} = {0A11878F-301A-48FF-B256-FAA91FA436B8}
 		{FAF6B00C-F183-44A8-A30F-4BC43A5DDBF5} = {0A11878F-301A-48FF-B256-FAA91FA436B8}
+		{EA15147C-04D2-4BC2-B10E-72E481B3C69B} = {B2AF5B68-E19A-4EA2-9D30-38C1DAA407A4}
 	EndGlobalSection
 EndGlobal

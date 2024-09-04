@@ -1,15 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "o6yXmdklYZu9HtAfSFwQyD8Ja+810VAV5xnnAX0Y2Cg/jmNkugEpol9OiWq9jpogD/WtgfaVdUzxB5CueI07Lw==",
+  "dgSpecHash": "lpyPozffAkgy7YcUK8ayx37zVaTZbqphF0tniQGr4rZMSmVMmcvNPlOuN4i0NO6IbmqdG0dkVTH1B+l1s9k3sw==",
   "success": false,
-  "projectFilePath": "/Users/mac-obs-55/Desktop/scanflow-xamarin-demo-app/Scanflow/Scanflow.csproj",
+  "projectFilePath": "/Users/racitsolutionspvtltd/Desktop/Sep4 Temp 2/scanflow-xamarin-demo-app/Scanflow/Scanflow.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {
       "code": "NU1301",
       "level": "Error",
-      "message": "The local source '/Users/mac-obs-55/Desktop/New Packages' doesn't exist.",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
       "libraryId": "Scanflow.TextCapture.Xamarin.Forms"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "The local source '/Users/racitsolutionspvtltd/Desktop/Sep3/Nuget' doesn't exist.",
+      "libraryId": "Xamarin.Forms"
     }
   ]
 }
